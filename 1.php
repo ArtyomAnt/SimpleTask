@@ -22,13 +22,12 @@ function rangeSum(int $num1, int $num2): int
     }
 
     $start = array_search($num1, INPUT);
-    $end = array_search($num2, INPUT) - $start + 1;
 
     return array_sum(
         array_slice(
             INPUT,
             $start,
-            $end
+            array_search($num2, INPUT) - $start + 1
         )
     );
 

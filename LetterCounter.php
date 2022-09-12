@@ -2,17 +2,17 @@
 
 class LetterCounter
 {
-    static function CountLettersAsString(string $input)
+    static function CountLettersAsString(string $input): string
     {
         $array = str_split(strtolower($input));
-        $temp = [];
+        $temp = array_fill_keys(array_values(array_unique($array)), null);
 
         array_map(function ($element) use (&$temp) {
-            $temp[$element] .= "*";
+            $temp[$element] ++;
         }, $array);
 
         array_walk($temp, function (&$e, $k) {
-            $e = $k . ":" . $e;
+            $e = $k . ":" . str_repeat('*',$e);
         });
 
 
@@ -20,4 +20,4 @@ class LetterCounter
     }
 }
 
-LetterCounter::CountLettersAsString("TestGorilla");
+echo LetterCounter::CountLettersAsString("TestGorilla");
