@@ -21,9 +21,13 @@ The return string must list the letters in order of their first appearance in th
 Examples
 LetterCounter
 CountLettersAsString
+
 LetterCounter::CountLettersAsString("TestGorilla")
-// `"t:**,e:*,s:*,g:*,o:*,r:*,i:*,l:**,a:*`
-"
+
+`"t:**,e:*,s:*,g:*,o:*,r:*,i:*,l:**,a:*`
+
+
 LetterCounter::CountLettersAsString("INTERVIEW")
-// `"i:**,n:*,t:*,e:**,r:*,v:*,w:*`
-"
+
+`"i:**,n:*,t:*,e:**,r:*,v:*,w:*`
+
